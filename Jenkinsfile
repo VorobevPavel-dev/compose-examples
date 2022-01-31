@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('yamllint') {
             steps {
-                sh "find . -regex \".*\\.ya*ml\" -exec yamllint -c ./.yamllint {} \;"
+                sh "find . -regex \".*\\.ya*ml\" -exec yamllint -c ./.yamllint {} \\;"
             }
         }
     }
