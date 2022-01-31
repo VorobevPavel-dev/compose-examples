@@ -10,10 +10,14 @@ git clone https://github.com/VorobevPavel-dev/compose-examples.git
 - Run ```docker-compose up -d```
 
 ## Versions
-| Application | Version |
+| Application | Image Version / Tag |
 | :----: | :----: |
 | Grafana | [8.3.4](https://grafana.com/docs/grafana/next/release-notes/release-notes-8-3-4/) |
 | InfluxDB | [2.1.1](https://docs.influxdata.com/influxdb/v2.1/reference/release-notes/influxdb/) |
+| Jenkins | latest |
 
 ## influx-monitoring
 Allows you to setup [InfluxDB](https://www.influxdata.com/) and [Grafana](https://grafana.com/) in a single network. Will create directories for persisent data.
+
+## jenkins
+Will create jenkins-master (blueocean version) container with Docker by side. Main idea and compose file got from [this article](https://davelms.medium.com/run-jenkins-in-a-docker-container-part-3-run-as-root-user-12b9624a340b)

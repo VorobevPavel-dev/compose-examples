@@ -1,0 +1,23 @@
+---
+version: "3"
+services:
+  jenkins:
+    container_name: jenkins-blueocean
+    image: "jenkinsci/blueocean"
+    restart: unless-stopped
+    user: "root"
+    networks:
+      - jenkins-network
+    volumes:
+      - "/var/lib/jenkins:/var/jenkins_home"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+
+volumes:
+  certs:
+
+networks:
+  jenkins-network:
+    name: "jenkins"
