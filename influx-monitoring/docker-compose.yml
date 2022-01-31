@@ -1,0 +1,29 @@
+version: "3"
+services:
+  database:
+    image: "influxdb:2.1.1"
+    ports: 
+      - "8086:8086"
+    volumes:
+      - /var/lib/influxdb:/var/lib/influxdb
+      - /var/lib/influxdb2:/var/lib/influxdb2
+      # Add mapping for config if there are any
+      # - /etc/influxdb/influxdb.conf
+    networks:
+      - influx_monitoring
+
+  visualization:
+    image: "grafana/grafana:8.3.4"
+    ports:
+      - "3000:3000"
+    volumes:
+      - /var/lib/grafana:/var/lib/grafana
+      # Add mapping for config if there are any
+      # -/etc/grafana/grafana.ini:/etc/grafana/grafana.ini
+    links:
+      - database:influx
+    networks:
+      - influx_monitoring
+
+networks:
+  influx_monitoring:
