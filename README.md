@@ -20,4 +20,4 @@ git clone https://github.com/VorobevPavel-dev/compose-examples.git
 Allows you to setup [InfluxDB](https://www.influxdata.com/) and [Grafana](https://grafana.com/) in a single network. Will create directories for persisent data.
 
 ## jenkins
-Will create jenkins-master (blueocean version) container with Docker by side. Main idea and compose file got from [this article](https://davelms.medium.com/run-jenkins-in-a-docker-container-part-3-run-as-root-user-12b9624a340b)
+Will create jenkins-master (blueocean version) container.
