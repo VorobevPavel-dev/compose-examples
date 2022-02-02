@@ -15,9 +15,14 @@ git clone https://github.com/VorobevPavel-dev/compose-examples.git
 | Grafana | [8.3.4](https://grafana.com/docs/grafana/next/release-notes/release-notes-8-3-4/) |
 | InfluxDB | [2.1.1](https://docs.influxdata.com/influxdb/v2.1/reference/release-notes/influxdb/) |
 | Jenkins | latest |
+| Kafka | [3.1.0](https://downloads.apache.org/kafka/3.1.0/RELEASE_NOTES.html) |
+| Zookeeper | [3.7.0](https://zookeeper.apache.org/doc/r3.7.0/releasenotes.html) |
 
 ## influx-monitoring
 Allows you to setup [InfluxDB](https://www.influxdata.com/) and [Grafana](https://grafana.com/) in a single network. Will create directories for persisent data.
 
 ## jenkins
 Will create jenkins-master (blueocean version) container.
+
+## kafka-zookeeper-standalone
+Sets up zookeeper and kafka nodes. Also provides Jolokia agent and exposes port for monitoring.
